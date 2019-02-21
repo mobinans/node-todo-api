@@ -29,6 +29,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
     });
     */
 
+    /*
     db.collection('Users').insertOne({
         name: 'Mobin Ansari',
         age: 32,
@@ -40,6 +41,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
 
         console.log(result.ops);
     });
+    */
 
     client.close();
 });

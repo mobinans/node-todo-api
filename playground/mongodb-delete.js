@@ -10,8 +10,18 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
     const db = client.db('TodoApp');
     
     //deleteMany
-    db.collection('Todo').deleteMany({text: 'Eat lunch'}).then((result) => {
-        console.log(`Total deleted items: ${result.n}`);
+    // db.collection('Todos').deleteMany({text: 'Eat lunch'}).then((result) => {
+    //     console.log(result);
+    // });
+
+    //deleteOne
+    db.collection('Todos').deleteOne({text: 'Eat lunch'}).then((result) => {
+        console.log(result);
+    });
+
+    //findOneAndDelete
+    db.collection('Todos').findOneAndDelete({completed: false}).then((result) => {
+        console.log(result);
     });
 
     // client.close();

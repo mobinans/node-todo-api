@@ -29,19 +29,18 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
     });
     */
 
-    /*
+    
     db.collection('Users').insertOne({
-        name: 'Mobin Ansari',
-        age: 32,
-        location: 'Noida UP'
+        name: 'Imran Ansari',
+        age: 30,
+        location: 'Ranchi JH'
     }, (err, result)=>{
         if(err){
             return console.log('Unable to insert Users', err);
         }
 
-        console.log(result.ops);
     });
-    */
+    
 
     client.close();
 });

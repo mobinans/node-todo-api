@@ -11,6 +11,14 @@ var userId = '5c7054afc9eb8325b057b9a1';
 //     return console.log('Invalid ID');
 // }
 
+Todo.find({}).then((todos) => {
+    if(!todos)
+    {
+        return console.log('No record find..');
+    }
+    console.log(todos);
+}).catch(e => console.log(e));
+
 // Todo.find({
 //     _id: id
 // }).then((todos) => {
@@ -32,12 +40,12 @@ var userId = '5c7054afc9eb8325b057b9a1';
 //     console.log(e);
 // });
 
-User.findById(userId).then((user) => {
-    if(!user){
-        return console.log('Unable to find user..');
-    }
-    console.log(JSON.stringify(user, undefined, 2));
-}).catch((e) => {
-    console.log(e);
-});
+// User.findById(userId).then((user) => {
+//     if(!user){
+//         return console.log('Unable to find user..');
+//     }
+//     console.log(JSON.stringify(user, undefined, 2));
+// }).catch((e) => {
+//     console.log(e);
+// });
 
